@@ -1,3 +1,10 @@
-﻿  program.cpp
-  SteamSpace.vcxproj -> C:\Users\THOMAS-LAB\Desktop\Dania\Dania 4.Sem\C++\SteamSpace\Debug\SteamSpace.exe
-  SteamSpace.vcxproj -> C:\Users\THOMAS-LAB\Desktop\Dania\Dania 4.Sem\C++\SteamSpace\Debug\SteamSpace.pdb (Partial PDB)
+﻿  GameWorld.cpp
+c:\users\thomas-lab\documents\steamspace2\steamspace\steamspace\gameworld.cpp(11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  soil.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+GameObject.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  Finished generating code
+  SteamSpace.vcxproj -> C:\Users\THOMAS-LAB\Documents\SteamSpace2\SteamSpace\Debug\SteamSpace.exe
+  SteamSpace.vcxproj -> C:\Users\THOMAS-LAB\Documents\SteamSpace2\SteamSpace\Debug\SteamSpace.pdb (Partial PDB)
