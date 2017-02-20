@@ -15,6 +15,7 @@ GameObject::GameObject(float initX, float initY, float initZ)
 
 GameObject::~GameObject()
 {
+
 }
 void GameObject::Render()
 {
