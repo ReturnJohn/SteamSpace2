@@ -15,4 +15,5 @@ void GameWorld::Render()
 }
 GameWorld::~GameWorld()
 {
+
 }
