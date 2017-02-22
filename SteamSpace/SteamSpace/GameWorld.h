@@ -1,11 +1,13 @@
 #pragma once
 #include "GameObject.h"
+#include "Player.h"
 class GameWorld
 {
 	
 private: 
-	GameObject * go;
+	Player * go;
 	int oldTimeSinceStart;
+	unsigned char input;
 public:
 	GameWorld();
 	void Update();

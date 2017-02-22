@@ -34,7 +34,7 @@ void Keyboard(unsigned char key, int x, int y)
 {
 	switch (key)
 	{
-	case 27: //ESC
+	case 1: //ESC
 		exit(0);
 		break;
 	default:

@@ -11,7 +11,7 @@ void GameWorld::Update()
 	float deltaTime = timeSinceStart - oldTimeSinceStart;
 	oldTimeSinceStart = timeSinceStart;
 
-	go->MoveR(deltaTime / 1000);
+	go->Update(deltaTime / 1000);
 
 	
 
@@ -37,7 +37,7 @@ GameWorld::GameWorld()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); //Specify how textures should be interpolized over surfaces 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); //Specify how textures should be interpolized over surfaces
 
-	go = new GameObject(0, 0, 0);
+	go = new Player(0, 0, 0);
 }
 
 

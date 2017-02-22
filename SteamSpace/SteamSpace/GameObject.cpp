@@ -34,11 +34,10 @@ void GameObject::Render()
 	glPopMatrix(); //Makes sure only this objects uses the current matrix any manipulation of the matrix is lost
 }
 
-void GameObject::MoveR(float gameTime)
+void GameObject::Move(float gameTime)
 {
 	x += 0.5f*gameTime;
 }
-void GameObject::MoveL(float gameTime)
-{
-	x -= 0.5f*gameTime;
+void GameObject::Update(float GameTime) {
+
 }

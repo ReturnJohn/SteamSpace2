@@ -11,8 +11,8 @@ private:
 public:
 	GameObject(float initX, float initY, float initZ);
 	~GameObject();
-	void MoveR(float gameTime);
-	void MoveL(float gameTime);
+	virtual void Move(float gameTime);
+	virtual void Update(float gameTime);
 	void Render();
 };
 
