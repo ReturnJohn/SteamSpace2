@@ -6,13 +6,13 @@ class Player :
 	
 
  public:
-	int i;
-	float x;
-    float y;
-	float z;
+	 float X;
+	 float Y;
+	 float Z;
+	
 	void MoveR();
 	void MoveL();
-    static void Keyboard(unsigned char key, int x, int y);
+    void Keyboard(unsigned char key, int x, int y);
 	void Update(float gameTime);
 	Player(float initX, float initY, float initZ);
 	~Player();

@@ -1,10 +1,12 @@
 #include "GameObject.h"
 #include<SOIL.h>
+#include <string>
 
 
 
 GameObject::GameObject(float initX, float initY, float initZ)
 {
+
 	x = initX;
 	y = initY;
 	z = initZ;
@@ -17,6 +19,7 @@ GameObject::~GameObject()
 {
 
 }
+
 void GameObject::Render()
 {
 	glPushMatrix(); //Makes sure only this objects uses the current matrix
@@ -36,7 +39,7 @@ void GameObject::Render()
 
 void GameObject::Move(float gameTime)
 {
-	x += 0.5f*gameTime;
+	
 }
 void GameObject::Update(float GameTime) {
 

@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "GameObject.h"
 #include <iostream>
+#include "SOIL.h"
 
 
 
@@ -11,32 +12,20 @@ Player::Player(float initX, float initY, float initZ) : GameObject(initX,initY,i
 	z = initZ;
 	
 	
+	
 }
 
-void Player::Keyboard(unsigned char key , int x, int y  )
-{ 
-	
-	
-	switch (key)
-	{
-	case'a': break;
-//	case'd': Player::X += 0.5f*100; break;
-	default:
-		break;
-	}
-
-}
 void Player::Update(float gameTime) 
 {
-	//X = x;
-	glutKeyboardFunc(&Keyboard);
+	
 }
 void Player::MoveL()
 {
-
+	x -= 0.5f * 10;
 }
 void Player::MoveR()
 {
+	x += 0.5f * 10 ;
        
 }
 Player::~Player()

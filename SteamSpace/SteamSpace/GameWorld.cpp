@@ -12,9 +12,6 @@ void GameWorld::Update()
 	oldTimeSinceStart = timeSinceStart;
 
 	go->Update(deltaTime / 1000);
-
-	
-
 }
 
 void GameWorld::Render() 
@@ -29,15 +26,15 @@ void GameWorld::Render()
 	glutPostRedisplay();
 
 }
-GameWorld::GameWorld()
+GameWorld::GameWorld(Player player)
 {
 	oldTimeSinceStart = 0;
 
 	glEnable(GL_TEXTURE_2D); //Enable texture mapping
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); //Specify how textures should be interpolized over surfaces 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); //Specify how textures should be interpolized over surfaces
-
-	go = new Player(0, 0, 0);
+	
+    *go = player;  
 }
 
 
