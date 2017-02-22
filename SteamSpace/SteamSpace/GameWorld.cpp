@@ -1,7 +1,7 @@
 #include "GameWorld.h"
 #include <GL/glut.h>
 #include <stdlib.h>
-
+GameObject * go;
 
 
 void GameWorld::Update() 
@@ -26,6 +26,12 @@ void GameWorld::Render()
 	glutPostRedisplay();
 
 }
+
+//void GameWorld::AddObject(GameObject go)
+//{
+//	sceneObjects.push_back(go);
+//}
+
 GameWorld::GameWorld(Player player)
 {
 	oldTimeSinceStart = 0;
@@ -34,7 +40,8 @@ GameWorld::GameWorld(Player player)
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); //Specify how textures should be interpolized over surfaces 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); //Specify how textures should be interpolized over surfaces
 	
-    *go = player;  
+	go = new Player(player);
+	
 }
 
 
