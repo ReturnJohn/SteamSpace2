@@ -2,6 +2,7 @@
 #include "GameObject.h"
 #include "Player.h"
 #include <vector>;
+#include <Vec2Library.h>
 using namespace std;
 class GameWorld
 {

@@ -10,7 +10,8 @@ void GameWorld::Update()
 	int timeSinceStart = glutGet(GLUT_ELAPSED_TIME);
 	float deltaTime = timeSinceStart - oldTimeSinceStart;
 	oldTimeSinceStart = timeSinceStart;
-
+	
+	
 	go->Update(deltaTime / 1000);
 }
 
@@ -19,7 +20,7 @@ void GameWorld::Render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear color and depth buffer
 	glLoadIdentity(); //loads the identity matrix on the matrix stack - essentially resetting any other matrixes
 	glTranslatef(0.0f, 0.0f, -12.0f);
-
+	
 	go->Render();
 
 	glutSwapBuffers();
