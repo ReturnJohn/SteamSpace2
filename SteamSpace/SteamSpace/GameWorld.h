@@ -8,20 +8,23 @@ class GameWorld
 {
 	
 private: 
-	GameObject *go;
+	Player *go;
 	int oldTimeSinceStart;
 	unsigned char input;
-	vector<GameObject *> sceneObjects;
-	vector<GameObject *>::iterator it;
+	vector<GameObject> sceneObjects;
+	vector<GameObject>::iterator it;
+
 	
 
 public:
 	float x;
 	float y;
 	float z;
-	
-	GameWorld(Player player);
+	void testPlayer();
+	void testPlayer2();
+	GameWorld(Player *player);
 	void AddObject(GameObject go);
+	void DeleteGameObject(GameObject *go);
 	void Update();
 	void Render();
 	~GameWorld();

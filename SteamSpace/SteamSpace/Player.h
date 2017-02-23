@@ -3,17 +3,12 @@
 class Player :
 	public GameObject
 {
-	
+private:
+
 
  public:
-	 float X;
-	 float Y;
-	 float Z;
-	
-	void MoveR();
-	void MoveL();
-    void Keyboard(unsigned char key, int x, int y);
-	void Update(float gameTime);
+	int direction;
+	void Move(float gameTime);
 	Player(float initX, float initY, float initZ);
 	~Player();
 };
