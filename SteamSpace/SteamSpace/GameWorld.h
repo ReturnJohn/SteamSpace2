@@ -13,8 +13,6 @@ private:
 	vector<GameObject> sceneObjects;
 	vector<GameObject>::iterator it;
 
-	
-
 public:
 	float x;
 	float y;
