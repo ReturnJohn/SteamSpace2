@@ -2,7 +2,7 @@
 #include <GL/glut.h>
 #include <SOIL.h>
 GameWorld * world;
-Player * player;
+
 
 void InitOpenGL()
 {
@@ -37,14 +37,14 @@ void Keyboard(unsigned char key, int x, int y)
 	case 27: 
 		exit(0);
 		break;
-	case'a': 
+	/*case'a': 
 		player->direction = 1; break;
 	case'd':
 		player->direction = 2; break;
 	case'w':
 		player->direction = 3; break;
 	case's':
-		player->direction = 4; break;
+		player->direction = 4; break;*/
 
 	
 	default:
@@ -64,7 +64,7 @@ void main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH); 
-	glutInitWindowSize(500, 500); 
+	glutInitWindowSize(1000, 1000); 
 	glutInitWindowPosition(0, 0); 
 
 	glutCreateWindow("My game"); 
@@ -74,9 +74,9 @@ void main(int argc, char** argv)
 	glutDisplayFunc(&GameLoop);
 	glutKeyboardFunc(&Keyboard);
 
-    player = new Player(0,-3,0);
+    
 
-	world = new GameWorld(player);
+	world = new GameWorld();
 	
 	
 	glutMainLoop();

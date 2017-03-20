@@ -1,9 +1,14 @@
 ﻿  Player.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  program.cpp
+  GameWorld.cpp
+program.obj : error LNK2005: "void __cdecl Keyboard(unsigned char,int,int)" (?Keyboard@@YAXEHH@Z) already defined in Player.obj
   soil.lib(SOIL.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
 GameObject.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   Generating code
   Finished generating code
-  SteamSpace.vcxproj -> C:\Users\THOMAS-LAB\Documents\SteamSpace2\SteamSpace\Debug\SteamSpace.exe
-  SteamSpace.vcxproj -> C:\Users\THOMAS-LAB\Documents\SteamSpace2\SteamSpace\Debug\SteamSpace.pdb (Partial PDB)
+program.obj : error LNK2005: "void __cdecl Keyboard(unsigned char,int,int)" (?Keyboard@@YAXEHH@Z) already defined in Player.obj
+C:\Users\THOMAS-LAB\Documents\SteamSpace2\SteamSpace\Debug\SteamSpace.exe : fatal error LNK1169: one or more multiply defined symbols found

@@ -12,12 +12,12 @@ void GameWorld::Update()
 	float deltaTime = timeSinceStart - oldTimeSinceStart;
 	oldTimeSinceStart = timeSinceStart;
 
-	for each (GameObject go in sceneObjects)
+	for each (GameObject *go in sceneObjects)
 	{
-       go.Move(deltaTime / 1000);
+       go->Move(deltaTime / 1000);
 	}
 
-	go->Move(deltaTime / 1000);
+	
 }
 
 void GameWorld::Render() 
@@ -26,26 +26,34 @@ void GameWorld::Render()
 	glLoadIdentity(); 
 	glTranslatef(0.0f, 0.0f, -12.0f);
 
-	for each (GameObject go in sceneObjects)
+	for each (GameObject* go in sceneObjects)
 	{
-		go.Render();
+		go->Render();
 	}
 	
-	go->Render();
+	
 	glutSwapBuffers();
 	glutPostRedisplay();
 
 }
-GameWorld::GameWorld(Player *player)
+GameWorld::GameWorld()
 {
 	
 	oldTimeSinceStart = 0;
-
+	
 	glEnable(GL_TEXTURE_2D); 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);  
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	go = new Player(0, 0, 0);
+	AddObject(go);
 	
-	go =  player;
+}
+
+void GameWorld::AddObject(GameObject *ged)
+{
+	
+	sceneObjects.push_back(ged);
+
 }
 
 GameWorld::~GameWorld()

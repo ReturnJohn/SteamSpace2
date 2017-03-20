@@ -1,9 +1,27 @@
 #include "Player.h"
 #include "GameObject.h"
 #include "SOIL.h"
+void Keyboard(unsigned char key, int x, int y)
+{
+	switch (key)
+	{
+	case'a': 
+	
+		break;
+	case'd':
+		//direction = 2; 
+		break;
+	case'w':
+		//direction = 3; 
+		break;
+	case's':	
+		//direction = 4; 
+		break;
+	default:
+		break;
+	}
 
-
-
+}
 Player::Player(float initX, float initY, float initZ) : GameObject(initX,initY,initZ)
 {
 	x = initX;
@@ -12,9 +30,8 @@ Player::Player(float initX, float initY, float initZ) : GameObject(initX,initY,i
 	direction = 0;
 	texture = SOIL_load_OGL_texture("Plane.png", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_INVERT_Y); //Load texture through soil
 	glBindTexture(GL_TEXTURE_2D, texture); 
+	glutKeyboardFunc(&Keyboard);
 }
-
-
 void Player::Move(float gameTime) 
 {
 	switch (direction)
@@ -34,6 +51,27 @@ void Player::Move(float gameTime)
 	default:
 		break;
 	}
+}
+void Player::Getdirection(char key) 
+{
+	switch (key)
+	{
+	case'a':
+		direction = 1;
+		break;
+	case'd':
+		direction = 2; 
+		break;
+	case'w':
+		direction = 3; 
+		break;
+	case's':
+		direction = 4; 
+		break;
+	default:
+		break;
+	}
+
 }
 
 

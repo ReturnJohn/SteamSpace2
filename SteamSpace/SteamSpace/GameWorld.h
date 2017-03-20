@@ -10,17 +10,15 @@ private:
 	Player *go;
 	int oldTimeSinceStart;
 	unsigned char input;
-	vector<GameObject> sceneObjects;
-	vector<GameObject>::iterator it;
+	vector<GameObject*> sceneObjects;
+	vector<GameObject*>::iterator it;
 
 public:
 	float x;
 	float y;
 	float z;
-	void testPlayer();
-	void testPlayer2();
-	GameWorld(Player *player);
-	void AddObject(GameObject go);
+	GameWorld();
+	void AddObject(GameObject *go);
 	void DeleteGameObject(GameObject *go);
 	void Update();
 	void Render();
